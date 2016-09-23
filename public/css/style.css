@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+#twitter-import {
+  display: block;
+  width: 50%;
+  margin: 0px auto;
+  box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  background: #fcfcfc; }
+
+#twitter-import h1,
+#twitter-import h3,
+#twitter-import p {
+  text-align: center; }
+
+#twitter-import input {
+  display: block;
+  width: 80%;
+  margin: 5px auto; }
+
+#twitter-import .mat-example {
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  text-align: center;
+  border: initial; }
+
+#twitter-import input {
+  text-align: center; }
+
+#twitter-import a {
+  text-decoration: none;
+  color: white; }
+
+#twitter-import .error {
+  color: red; }
+
+/*********** buttons **************/
+.mat-example {
+  /*general styling for all buttons*/
+  font-family: "Roboto";
+  color: #244549;
+  position: absolute;
+  background: #31ce74;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.15);
+  text-shadow: none;
+  transition: all .3s ease-out; }
+
+.mat-example.hovered {
+  /*makes it 'elevate'*/
+  transform: scale(1.05) !important; }
+
+.ripple {
+  /*stylings for the circular overlay*/
+  position: absolute;
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.05);
+  transition: all .3s ease-out; }
+
+.notransition {
+  /*used to reset the ripple without an animatiion*/
+  transition: none !important; }
+
+/*just the button stylings*/
+.mat-example.big {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: 50px;
+  width: 400px;
+  height: 200px;
+  font-size: 24px;
+  line-height: 200px; }
+
+.mat-example.small {
+  position: relative;
+  padding: 10px;
+  margin-left: 40px;
+  color: white; }
+
+.mat-example.medium {
+  padding: 10px;
+  font-size: 24px;
+  margin-top: 50px;
+  margin-left: 200px; }
+
+/******** buttons *************/

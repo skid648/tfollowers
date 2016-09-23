@@ -1,0 +1,12 @@
+{% extends 'layout.nunjucks' %}
+
+{% block content %}
+
+<form id="twitter-import" method="POST" action="/import">
+  <h1>{{title}}</h1>
+  <h3 class='{{ instruction_type }}'>{{instructions}}</h3>
+  <input name="userid">
+  <button type="submit" class="mat-example small">Submit<div class="ripple"></div></button>
+</form>
+
+{% endblock %}
