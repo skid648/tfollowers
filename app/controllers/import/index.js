@@ -6,12 +6,13 @@ const logger = require('../../../config/logger')
 var Twitter = require('twitter')
 var Client = require('mongoose').model('Client')
 var Followers = require('mongoose').model('Followers')
+var config = require('../../../config/config')
 
 var client = new Twitter({
-  consumer_key:         'raCr6vpkMGirsUzXALRnZQ',
-  consumer_secret:      'JPEf3tBkZ3onm3M3yoEBAgKM6qLLAyccTBaND3e5rY',
-  access_token_key:         '1969109599-sHJULyhjMfpTW2ppBMVbD8Me6GdaV3gBWocAaLZ',
-  access_token_secret:  '8qt5TrPyQMnr6ghgrJlaO7Yrt2n42Ug3VolCfcZdc',
+  consumer_key:         config.twitter.consumer_key,
+  consumer_secret:      config.twitter.consumer_secret,
+  access_token_key:     config.twitter.access_token_key,
+  access_token_secret:  config.twitter.access_token_secret
 })
 
 
