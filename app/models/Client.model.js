@@ -22,7 +22,7 @@ var ClientSchema = new Schema({
 ClientSchema.statics.findOrCreate = function findOrCreate (screen_name,total_followers,imported_followers, callback) {
     var client = new this()
     logger.info('schema', screen_name)
-    this.findOne({ screen_name : screen_name ,total_followers : total_followers ,imported_followers : imported_followers  }, function (err, result) {
+    this.findOne({ screen_name : screen_name }, function (err, result) {
         if (!result) {
 
             client.screen_name = screen_name

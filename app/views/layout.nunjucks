@@ -10,16 +10,47 @@
 			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
 			  crossorigin="anonymous"></script>
   {% if ENV_DEVELOPMENT %}
-    <script src="http://localhost:35729/livereload.js"></script>
+    <!-- <script src="http://localhost:35729/livereload.js"></script> -->
   {% endif %}
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 </head>
 <body>
   {% block content %}{% endblock %}
   <script>
+
+
   if($('#percentage').length){
     console.log('socket is running');
+    var socket = io.connect('http://localhost:8888');
+    socket.on('messages', function(data) {
+                  $('#percentage #number').html(data.counter);
+                  console.log(data.totalFollowers);
+                  $('.progress-wrap').data('progress-percent',data.totalFollowers);
+                  moveProgressBar();
+                  if(data.totalFollowers == 100){
+                    $('#showF').show();
+                  }
+          });
+      moveProgressBar();
+     // on browser resize...
+     $(window).resize(function() {
+         moveProgressBar();
+     });
 
+     // SIGNATURE PROGRESS
+     function moveProgressBar() {
+       console.log("moveProgressBar");
+         var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
+         var getProgressWrapWidth = $('.progress-wrap').width();
+         var progressTotal = getPercent * getProgressWrapWidth;
+         var animationLength = 2500;
 
+         // on page load, animate percentage bar to data percentage length
+         // .stop() used to prevent animation queueing
+         $('.progress-bar').stop().animate({
+             left: progressTotal
+         }, animationLength);
+     }
     }
   </script>
 </body>

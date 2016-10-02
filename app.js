@@ -1,7 +1,12 @@
 var express = require('express'),
   config = require('./config/config'),
   glob = require('glob'),
-  mongoose = require('mongoose');
+  mongoose = require('mongoose'),
+  http = require('http'),
+  cookieParser = require('cookie-parser'),
+  session = require('express-session');
+ const passport = require('passport');
+
 
 
 mongoose.connect(config.db);
@@ -18,6 +23,28 @@ models.forEach(function (model) {
 require('./config/passport')();
 
 var app = express();
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
+io.on('connection', function(){});
+server.listen(8888);
+
+app.use(cookieParser());
+app.use(session({
+  secret: 'hg>?+JDFLhgskddf008gjhg',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true,
+            user :{
+                id: ''
+            }
+          }
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+app.io = io;
 
 require('./config/express')(app, config);
 

@@ -11,6 +11,7 @@ var nunjucks = require('nunjucks');
 var passport = require('passport');
 var session = require('express-session');
 
+
 module.exports = function(app, config) {
   var env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;

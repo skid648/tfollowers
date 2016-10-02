@@ -9,16 +9,16 @@ var config = {
       name: 'socital'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/yourdatabase',
+    db: 'mongodb://localhost/socital-development',
     facebook: {
-        appId: "#######"  || process.env.FACEBOOK_APP_ID,
-        appSecret: "########" || process.env.FACEBOOK_APP_SECRET
+        appId: "1588555561447103"  || process.env.FACEBOOK_APP_ID,
+        appSecret: "7be01cdcf2dda0d5b787b996840b348a" || process.env.FACEBOOK_APP_SECRET
     },
     twitter: {
-        consumer_key:         "########" || process.env.TWITTER_CONSUMER_KEY,
-        consumer_secret:      "########" || process.env.TWITTER_CONSUMER_SECRET,
-        access_token_key:         "#######" || process.env.TWITTER_ACCESS_TOKEN,
-        access_token_secret:  "########" || process.env.TWITTER_ACCESS_TOKEN_SECRET
+        consumer_key:         "raCr6vpkMGirsUzXALRnZQ" || process.env.TWITTER_CONSUMER_KEY,
+        consumer_secret:      "JPEf3tBkZ3onm3M3yoEBAgKM6qLLAyccTBaND3e5rY" || process.env.TWITTER_CONSUMER_SECRET,
+        access_token_key:         "1969109599-sHJULyhjMfpTW2ppBMVbD8Me6GdaV3gBWocAaLZ" || process.env.TWITTER_ACCESS_TOKEN,
+        access_token_secret:  "8qt5TrPyQMnr6ghgrJlaO7Yrt2n42Ug3VolCfcZdc" || process.env.TWITTER_ACCESS_TOKEN_SECRET
     }
   },
 

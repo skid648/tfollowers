@@ -2,10 +2,21 @@
 
 {% block content %}
 
-<form id="twitter-import" method="POST" action="/import">
+<form id="twitter-import" method="GET" action="/followers">
+<input type="hidden" name="id" value="{{client_id}}" />
+  <div class='Profile'>
+      <img src='{{img_url}}' />
+    <h2 style='text-align:Center;'>
+      <b>@{{client_name}}</b>
+    </h2>
+  </div>
   <h1>{{title}}</h1>
   <h3 class='{{ instruction_type }}'>{{instructions}}</h3>
-  <h3 id='percentage'>{{count}}</h3>
+  <h3 id='percentage'><span id='number'>{{count}}</span>/<span id='total' >{{totalFollowers}}</span></h3>
+  <div class="progress-wrap progress" data-progress-percent="0">
+    <div class="progress-bar progress"></div>
+  </div>
+  <button id='showF' style='display:none' type="submit" class="mat-example small">Show followers<div class="ripple"></div></button>
 </form>
 
 {% endblock %}

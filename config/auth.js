@@ -7,9 +7,13 @@
  const passport = require('passport'),
   logger = require('./logger')
 
+
+
+
+
  module.exports = {
      login: function (req, res, next) {
-         logger.info('test');
+       if(!req.session.cookie.user.id){
          var auth = passport.authenticate('facebook', function (err, user) {
             if (err) {
                 logger.error('error')
@@ -24,11 +28,15 @@
 
             req.logIn(user, function (err) {
                 if (err) return next(err)
+                req.session.cookie.user.id = user._id;
                 res.redirect('/input')
             })
          })
 
          auth(req, res, next)
+       }else{
+         res.redirect('/input')
+       }
      },
      logout: function (req, res, next) {
          req.logout()

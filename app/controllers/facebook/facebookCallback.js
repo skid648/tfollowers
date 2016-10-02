@@ -7,8 +7,7 @@
  const logger = require('../../../config/logger')
 
 exports.facebookCallback = function (req, res, next) {
-     logger.debug('callback')
-
+     //logger.debug('callback')
      res.send('ok')
 
     //  return callback()
