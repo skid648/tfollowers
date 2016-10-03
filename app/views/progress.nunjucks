@@ -4,6 +4,7 @@
 
 <form id="twitter-import" method="GET" action="/followers">
 <input type="hidden" name="id" value="{{client_id}}" />
+<input type="hidden" name="client_name" value="{{client_name}}" />
   <div class='Profile'>
       <img src='{{img_url}}' />
     <h2 style='text-align:Center;'>

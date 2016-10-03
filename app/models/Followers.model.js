@@ -23,7 +23,7 @@ FollowersSchema.statics.findOrCreate = function findOrCreate (screen_name, clien
 
     this.findOne({ screen_name : screen_name, client: client }, function (err, result) {
         if (!result) {
-            
+
             follower.screen_name = screen_name
             follower.client = client
 

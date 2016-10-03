@@ -69,6 +69,38 @@ a {
   color: red;
 }
 
+.followers {
+    margin: 20px;
+}
+
+.user_profile {
+    padding: 5px 20px;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.13);
+    margin: 14px 0px;
+}
+
+.status.bar {
+    padding: 20px;
+}
+
+.client {
+    color: #31ce74;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 18px;
+    margin: 0px 10px 0px 5px;
+}
+
+.delete {
+    display: inline-block;
+    align-content: right;
+    background: #31ce74;
+    color: white;
+    padding: 5px;
+    vertical-align: bottom;
+    border-radius: 5px;
+}
+
 /*********** buttons **************/
 .mat-example {
   /*general styling for all buttons*/

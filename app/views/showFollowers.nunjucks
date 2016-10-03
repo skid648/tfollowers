@@ -1,13 +1,16 @@
 {% extends 'layout.nunjucks' %}
 
 {% block content %}
-  <div class='user_profile'>
-    <div style='float:left;'>
-        <img src='{{imgUrl}}'/>
-    </div>
-    <div style='float:left;'>
-        <h1>{{ name }}</h1>
-        <p>#{{ screenName }}</p>
-    </div>
+<div class='status bar'><i style='vertical-align: bottom;' class="material-icons">account_circle</i><span class='client'>{{client}}</span><span class='delete'>Delete followers</span></div>
+<div class='followers'>
+{% for item in follower%}
+<div class='user_profile'>
+  <div>
+      <h2>#{{ item.screen_name}}</h2>
+      <p>{{ item._id }}</p>
   </div>
+</div>
+{% endfor %}
+</div>
+<style>body{display:block;}</style>
 {% endblock %}
