@@ -9,16 +9,16 @@ var config = {
       name: 'socital'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/your-db',
+    db: 'mongodb://localhost/dbname',
     facebook: {
-        appId: "xxxxxxxxxxxxx"  || process.env.FACEBOOK_APP_ID,
-        appSecret: "xxxxxxxxxxxxx" || process.env.FACEBOOK_APP_SECRET
+        appId: "xxxxxxxxxxxxxxxx"  || process.env.FACEBOOK_APP_ID,
+        appSecret: "xxxxxxxxxxxxxxxx" || process.env.FACEBOOK_APP_SECRET
     },
     twitter: {
-        consumer_key:         "xxxxxxxxxxxxx" || process.env.TWITTER_CONSUMER_KEY,
-        consumer_secret:      "xxxxxxxxxxxxx" || process.env.TWITTER_CONSUMER_SECRET,
-        access_token_key:         "xxxxxxxxxxxxx" || process.env.TWITTER_ACCESS_TOKEN,
-        access_token_secret:  "xxxxxxxxxxxxx" || process.env.TWITTER_ACCESS_TOKEN_SECRET
+        consumer_key:         "xxxxxxxxxxxxxxxx" || process.env.TWITTER_CONSUMER_KEY,
+        consumer_secret:      "xxxxxxxxxxxxxxxx" || process.env.TWITTER_CONSUMER_SECRET,
+        access_token_key:     "xxxxxxxxxxxxxxxx" || process.env.TWITTER_ACCESS_TOKEN,
+        access_token_secret:  "xxxxxxxxxxxxxxxx" || process.env.TWITTER_ACCESS_TOKEN_SECRET
     }
   },
 
@@ -30,8 +30,8 @@ var config = {
     port: process.env.PORT || 3000,
     db: 'mongodb://localhost/socital-test',
     facebook: {
-        appId: "xxxxxxxxxxxxx"  || process.env.FACEBOOK_APP_ID,
-        appSecret: "xxxxxxxxxxxxx" || process.env.FACEBOOK_APP_SECRET
+        appId: "xxxxxxxxxxxxxxxx"  || process.env.FACEBOOK_APP_ID,
+        appSecret: "xxxxxxxxxxxxxxxx" || process.env.FACEBOOK_APP_SECRET
     }
   },
 
@@ -43,10 +43,11 @@ var config = {
     port: process.env.PORT || 3000,
     db: 'mongodb://localhost/socital-production',
     facebook: {
-        appId: "xxxxxxxxxxxxx"  || process.env.FACEBOOK_APP_ID,
-        appSecret: "xxxxxxxxxxxxx" || process.env.FACEBOOK_APP_SECRET
+        appId: "xxxxxxxxxxxxxxxx"  || process.env.FACEBOOK_APP_ID,
+        appSecret: "xxxxxxxxxxxxxxxx" || process.env.FACEBOOK_APP_SECRET
     }
   }
 };
 
 module.exports = config[env];
+
